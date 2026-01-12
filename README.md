@@ -1,7 +1,6 @@
 # Pipeline de ventas de una empresa Retail
 
-Creación de un proceso pipeline donde se extraen datos de ventas minoristas (a través de un archivo csv), lo transforma y posteriormente lo carga a hacia una base de datos en SQL Server.
-
+Creación de un proceso pipeline de ventas que cumple con el objetivo de extraer datos no procesados de un archivo CSV, normalizar y procesar los datos incompletos para finalmente cargarlo a una base de datos creada en SQL Server.
 ## Descripción
 
 El proyecto automatiza el proceso de:
@@ -61,5 +60,6 @@ El script registrará el progreso y cualquier error mediante el manejo de loggin
 - ✅ Manejo robusto de excepciones
 - ✅ Logging detallado de cada paso
 - ✅ Manejo de pandas para la normalización de datos y columnas 
-- ✅ Manejo de pandas para llenar datos automáticamente
-- ✅ Conversión de tipos de datos
+- ✅ Llenado de valores nulos numéricos con la media (promedio) de su misma columna (a excepción de totales)
+- ✅ Llenado de valores nulos no numéricos con un texto por defecto.
+- ✅ Conversión de tipos (formato fecha por ejemplo)

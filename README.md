@@ -1,9 +1,11 @@
 # Pipeline de ventas de una empresa Retail
 
 Creación de un proceso pipeline de ventas que cumple con el objetivo de extraer datos no procesados de un archivo CSV, normalizar y procesar los datos incompletos para finalmente cargarlo a una base de datos creada en SQL Server.
+
 ## Descripción
 
-El proyecto automatiza el proceso de:
+En el presente proyecto se aplica el proceso ETL (Extracción, Transformación y Carga):
+
 1. **Extracción** de datos del archivo `retail_store_sales.csv`, ubicado en la carpeta "data".
 2. **Transformar** los datos limpiando valores faltantes, normalizando columnas y formatos de fecha
 3. **Cargar** los datos procesados hacia una tabla SQL Server local.

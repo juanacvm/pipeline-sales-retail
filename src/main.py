@@ -1,5 +1,7 @@
 import pandas as pd
 import logging
+import sys
+import time
 from database import engine,engine_master, sql_query, create_database
 from models import Base
 from etl_logic import *
@@ -16,7 +18,8 @@ def run_pipeline():
     try:
 
         logger.info('Iniciando pipeline de ETL...')
-        
+        time.sleep(40)
+
         # Crea la base de datos en caso no exista
         logger.info('Levantando la base de datos...')
         create_database(engine, sql_query)
@@ -46,16 +49,16 @@ def run_pipeline():
 
     except FileNotFoundError as e:
         logger.error(f'Error: Archivo no encontrado - {e}')
-        return False
+        sys.exit(1)
     
     except ValueError as e:
         logger.error(f'Error: Problema con los datos - {e}')
-        return False
+        sys.exit(1)
     
     except Exception as e:
         logger.error(f'Error inesperado en el pipeline: {type(e).__name__} - {e}')
-        return False
-
+        sys.exit(1)
+    
 if __name__ == '__main__':
     success = run_pipeline()
     exit(0 if success else 1)

@@ -121,7 +121,13 @@ python src/main.py
 
 #### Pasos:
 
-1. **Configurar variables de entorno (reemplazar `.env.example` por `.env`):**
+1. **Clona el repositorio**
+```bash
+git clone https://github.com/juanacvm/pipeline-sales-retail.git
+cd pipeline-sales-retail-main
+```
+
+2. **Configurar variables de entorno (reemplazar `.env.example` por `.env`):**
 ```
 DB_SERVER=mssql_server,1433
 DB_NAME="Nombre de la base de datos"
@@ -130,12 +136,12 @@ DB_PASSWORD="Contraseña del usuario de base de datos"
 DB_DRIVER=ODBC Driver 17 for SQL Server
 ```
 
-2. **Construir e iniciar los contenedores:**
+3. **Construir e iniciar los contenedores:**
 ```bash
 docker-compose up --build
 ```
 
-3. **Detener los servicios:**
+4. **Detener los servicios:**
 ```bash
 docker-compose down
 ```

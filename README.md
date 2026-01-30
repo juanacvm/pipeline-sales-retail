@@ -85,12 +85,18 @@ retail-csv-cleaner/
 
 #### Instalación:
 
-1. **Instalar dependencias:**
+1. **Clona el repositorio**
+```bash
+git clone https://github.com/juanacvm/pipeline-sales-retail.git
+cd pipeline-sales-retail-main
+```
+
+2. **Instalar dependencias:**
 ```bash
 pip install -r requirements.txt
 ```
 
-2. **Configurar variables de entorno (reemplazar `.env.example` por `.env`):**
+3. **Configurar variables de entorno (reemplazar `.env.example` por `.env`):**
 ```
 DB_SERVER="Nombre del servidor (SELECT @@SERVERNAME)"
 DB_NAME="Nombre de la base de datos"
@@ -99,7 +105,7 @@ DB_PASSWORD="Contraseña del usuario de base de datos"
 DB_DRIVER="Driver de DB, puede ser: ODBC Driver 17 for SQL Server"
 ```
 
-3. **Ejecutar el pipeline:**
+4. **Ejecutar el pipeline:**
 ```bash
 python src/main.py
 ```
